@@ -19,8 +19,7 @@ npm or yarn e2j
 
 gulp e2j =>
 
-` ``
-
+```
 [{
 "id": 1,
 "name": "小明",
@@ -50,8 +49,7 @@ gulp e2j =>
 "familys": ["farther","mother", "brother"]
 }
 ]
-
-` ``
+```
 
 # 对象 object
 
@@ -66,8 +64,7 @@ gulp e2j =>
 
 gulp e2j =>
 
-``
-
+```
 {
 "xiaoming":{
 "id": 1,
@@ -101,4 +98,4 @@ gulp e2j =>
 }
 }
 
-``
+```
