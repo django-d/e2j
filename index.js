@@ -22,10 +22,7 @@ var toJson = function (fileName, headRow, valueRow) {
 
     // json to return
     var json;
-    var curRow = 0;
     var [isKey, keys, content, total] = getExcelColInfo(worksheet);
-
-    console.log(isKey, keys, content);
 
     // 是一个对象
     if (isKey) {
@@ -53,7 +50,6 @@ var toJson = function (fileName, headRow, valueRow) {
             json.push(o);
         }
     }
-
     console.log('json:', json);
     return json;
 };
