@@ -1,10 +1,11 @@
-# e2j
+# e2j init
 
-gulp => excel2json
-
-# No.1
-
+```
 npm or yarn e2j
+
+1、Make sure you have a gulp installed
+2、let's get start
+```
 
 # 数组 array
 
