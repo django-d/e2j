@@ -21,34 +21,34 @@ gulp e2j =>
 
 ```
 [{
-"id": 1,
-"name": "小明",
-"grade": {
-"math": 100,
-"english": 80,
-},
-"is3Good": true,
-"familys": ["farther","mother", "brother"]
-},{
-"id": 1,
-"name": "小红",
-"grade": {
-"math": 100,
-"english": 80,
-},
-"is3Good": true,
-"familys": ["farther","mother", "brother"]
-},{
-"id": 1,
-"name": "小绿",
-"grade": {
-"math": 100,
-"english": 80,
-},
-"is3Good": true,
-"familys": ["farther","mother", "brother"]
-}
-]
+    "id": 1,
+    "name": "小明",
+    "grade": {
+        "math": 100,
+        "english": 80
+    },
+    "is3Good": true,
+    "familys": ["farther", "mother", "brother"]
+}, {
+    "id": 1,
+    "name": "小红",
+    "grade": {
+        "math": 100,
+        "english": 80
+    },
+    "is3Good": true,
+    "familys": ["farther", "mother", "brother"]
+}, {
+    "id": 1,
+    "name": "小绿",
+    "grade": {
+        "math": 100,
+        "english": 80
+    },
+    "is3Good": true,
+    "familys": ["farther", "mother", "brother"]
+}]
+
 ```
 
 # 对象 object
@@ -66,36 +66,57 @@ gulp e2j =>
 
 ```
 {
-"xiaoming":{
-"id": 1,
-"name": "小明",
-"grade": {
-"math": 100,
-"english": 80,
-},
-"is3Good": true,
-"familys": ["farther","mother", "brother"]
-},
-"xiaohong":{
-"id": 1,
-"name": "小红",
-"grade": {
-"math": 100,
-"english": 80,
-},
-"is3Good": true,
-"familys": ["farther","mother", "brother"]
-},
-"xiaolv":{
-"id": 1,
-"name": "小绿",
-"grade": {
-"math": 100,
-"english": 80,
-},
-"is3Good": true,
-"familys": ["farther","mother", "brother"]
+    "xiaoming": {
+        "id": 1,
+        "name": "小明",
+        "grade": {
+            "math": 100,
+            "english": 80
+        },
+        "is3Good": true,
+        "familys": ["farther", "mother", "brother"]
+    },
+    "xiaohong": {
+        "id": 1,
+        "name": "小红",
+        "grade": {
+            "math": 100,
+            "english": 80
+        },
+        "is3Good": true,
+        "familys": ["farther", "mother", "brother"]
+    },
+    "xiaolv": {
+        "id": 1,
+        "name": "小绿",
+        "grade": {
+            "math": 100,
+            "english": 80
+        },
+        "is3Good": true,
+        "familys": ["farther", "mother", "brother"]
+    }
 }
-}
+
+```
+
+example =>
+
+```
+
+var e2j = require('e2j');
+
+gulp.task('e2j', function () {
+    gulp.src('config/**.xlsx')
+        .pipe(e2j({
+            trace: true
+        }))
+        .pipe(rename((path) => {
+            path.extname = ".json";
+        }))
+        .pipe(gulp.dest('excel'))
+});
+
+gulp e2j
 
 ```
