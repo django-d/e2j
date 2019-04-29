@@ -50,7 +50,6 @@ var toJson = function (fileName, headRow, valueRow) {
             json.push(o);
         }
     }
-    console.log('json:', json);
     return json;
 };
 
